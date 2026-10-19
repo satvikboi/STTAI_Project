@@ -1,9 +1,10 @@
 # CS203 Assignment 1 — Project 5: Voice Helpdesk ASR
 **Cross-Lingual Institute Voice Helpdesk with Drift-Triggered Retraining**
 
-**Team**: Rajdeep Vraj, Vipul Sunil Patil, Satvik Sharma
+**Team**: Rajdeep Vraj, Vipul Sunil Patil, Satvik Sharma (Equal Contribution)
 **Course**: CS 203, IIT Gandhinagar, Semester I 2026-27
-**GitHub**: [add URL here]
+**GitHub**: https://github.com/vipulSP2108/STTAI_Project.git
+**Equal Contribution**: All 3 members contributed equally to all project phases.
 **Deadline**: 18 October 2026
 
 ---
