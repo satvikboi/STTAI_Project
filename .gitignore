@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS artifacts
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Test & coverage caches
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Raw audio files (tracked via DVC and data/metadata.csv)
+Records/
+Records.zip
+data/raw/audio/
+data/processed/augmented/*.wav
+temp_*.wav
+
+# Local DVC remotes
+../dvc-remote
