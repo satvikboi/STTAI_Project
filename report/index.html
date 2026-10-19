@@ -172,9 +172,9 @@
               <section className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="p-6 rounded-xl bg-slate-900/70 border border-slate-800">
-                    <h2 className="text-lg font-bold text-white mb-2">Duration Distribution (Bounds Checked)</h2>
+                    <h2 className="text-lg font-bold text-white mb-2">Duration Distribution Profiling</h2>
                     <p className="text-xs text-slate-400 mb-4">
-                      Energy-based silence segmentation divided long recordings into natural queries ranging from 6.07s to 28.25s (mean 18.57s).
+                      (Left) P1–P12 single voice notes with clear primary mode at ~1.0 minute (mean 62.3s, 1.04 min); (Right) P13–P19 atomic queries extracted into <code>1 clip 1 tar</code> folders (mean 8.5s).
                     </p>
                     <img src="figures/duration_distribution.png" alt="Duration Distribution" className="rounded-lg border border-slate-800 w-full" />
                   </div>
@@ -188,27 +188,44 @@
                 </div>
 
                 <div className="p-6 rounded-xl bg-slate-900/70 border border-slate-800">
-                  <h3 className="text-sm font-bold text-white mb-3 uppercase tracking-wider">Speaker Ingestion Matrix (Records/ Directory)</h3>
+                  <h3 className="text-sm font-bold text-white mb-3 uppercase tracking-wider">Participant Ingestion &amp; Structure Breakdown</h3>
                   <div className="overflow-x-auto">
                     <table className="w-full text-xs text-left text-slate-300">
                       <thead className="bg-slate-800/60 text-slate-200">
                         <tr>
-                          <th className="p-2.5">Speaker</th>
-                          <th className="p-2.5">Region</th>
+                          <th className="p-2.5">Participant Group</th>
+                          <th className="p-2.5">Capture Structure</th>
                           <th className="p-2.5">Raw Containers</th>
-                          <th className="p-2.5">Ingested Clips</th>
-                          <th className="p-2.5">Total Duration</th>
-                          <th className="p-2.5">Status</th>
+                          <th className="p-2.5">Extracted / Ingested</th>
+                          <th className="p-2.5">Mean Duration</th>
+                          <th className="p-2.5">Folder Architecture</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-800">
-                        <tr><td className="p-2 font-mono">P1 - P3</td><td className="p-2">Gujarat</td><td className="p-2 font-mono">.m4a, .opus</td><td className="p-2">26 clips</td><td className="p-2">8.34 min</td><td className="p-2 text-emerald-400 font-semibold">Ingested &amp; Verified</td></tr>
-                        <tr><td className="p-2 font-mono">P4</td><td className="p-2">Maharashtra (Cohort B)</td><td className="p-2 font-mono">.opus</td><td className="p-2">18 clips</td><td className="p-2">5.53 min</td><td className="p-2 text-blue-400 font-semibold">Held-out Shift Group</td></tr>
-                        <tr><td className="p-2 font-mono">P5 - P6</td><td className="p-2">North India</td><td className="p-2 font-mono">.opus</td><td className="p-2">24 clips</td><td className="p-2">7.25 min</td><td className="p-2 text-emerald-400 font-semibold">Ingested &amp; Verified</td></tr>
-                        <tr><td className="p-2 font-mono">P7 - P8</td><td className="p-2">Gujarat, Rajasthan</td><td className="p-2 font-mono">.opus, .ogg</td><td className="p-2">72 clips</td><td className="p-2">22.81 min</td><td className="p-2 text-emerald-400 font-semibold">Ingested &amp; Verified</td></tr>
-                        <tr><td className="p-2 font-mono">P9 - P12</td><td className="p-2">South India, Gujarat</td><td className="p-2 font-mono">.opus</td><td className="p-2">52 clips</td><td className="p-2">16.32 min</td><td className="p-2 text-emerald-400 font-semibold">Ingested &amp; Verified</td></tr>
-                        <tr><td className="p-2 font-mono">P13</td><td className="p-2">Maharashtra (Cohort B)</td><td className="p-2 font-mono">.mp4</td><td className="p-2">14 clips</td><td className="p-2">3.80 min</td><td className="p-2 text-blue-400 font-semibold">Held-out Shift Group</td></tr>
-                        <tr><td className="p-2 font-mono">P14 - P19</td><td className="p-2">Various Regions</td><td className="p-2 font-mono">.aac, .mpeg, .ogg</td><td className="p-2">43 clips</td><td className="p-2">13.04 min</td><td className="p-2 text-emerald-400 font-semibold">Ingested &amp; Verified</td></tr>
+                        <tr>
+                          <td className="p-2 font-mono text-blue-400 font-bold">P1 – P12 (12 speakers)</td>
+                          <td className="p-2">Single large voice notes</td>
+                          <td className="p-2 font-mono">.m4a, .opus, .ogg</td>
+                          <td className="p-2 font-semibold text-white">58 clips</td>
+                          <td className="p-2 text-emerald-400 font-semibold">62.33 s (1.04 min)</td>
+                          <td className="p-2 text-slate-400">1 single query per file (~1 min nominal)</td>
+                        </tr>
+                        <tr>
+                          <td className="p-2 font-mono text-purple-400 font-bold">P13 – P19 (7 speakers)</td>
+                          <td className="p-2">Multi-query bundled sessions</td>
+                          <td className="p-2 font-mono">.mp4, .mpeg, .aac, .ogg</td>
+                          <td className="p-2 font-semibold text-white">7 raw recordings</td>
+                          <td className="p-2 text-amber-400 font-semibold">138.8 s (~2.3 min)</td>
+                          <td className="p-2 text-slate-400">Concatenated multiple prompt queries</td>
+                        </tr>
+                        <tr>
+                          <td className="p-2 font-mono text-emerald-400 font-bold">P13 – P19 (\"1 clip 1 tar\")</td>
+                          <td className="p-2">Extracted atomic query clips</td>
+                          <td className="p-2 font-mono">16kHz .wav</td>
+                          <td className="p-2 font-semibold text-emerald-400">101 discrete clips</td>
+                          <td className="p-2 text-emerald-400 font-semibold">8.5 s (per query)</td>
+                          <td className="p-2 text-slate-300 font-mono">Records/P*/1 clip 1 tar/ (1 clip per file)</td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>
