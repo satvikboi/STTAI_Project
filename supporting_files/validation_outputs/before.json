@@ -1,0 +1,51 @@
+{
+  "phase": "before",
+  "summary": {
+    "passed": 6,
+    "failed": 3,
+    "skipped": 1,
+    "total": 10
+  },
+  "checks": {
+    "test_sample_rate": {
+      "status": "PASSED",
+      "details": "All 249 clips at 16000 Hz"
+    },
+    "test_channels": {
+      "status": "PASSED",
+      "details": "All 249 clips mono"
+    },
+    "test_duration_bounds": {
+      "status": "PASSED",
+      "details": "All clips within 1.0s - 30.0s"
+    },
+    "test_no_clipping": {
+      "status": "FAILED",
+      "details": "Raw participant audio from phones exhibits digital clipping spikes"
+    },
+    "test_silence_ratio": {
+      "status": "FAILED",
+      "details": "Raw clips contain long pauses before speaking (>50% silence)"
+    },
+    "test_snr_estimate": {
+      "status": "PASSED",
+      "details": "SNR >= 5 dB across all clips"
+    },
+    "test_no_duplicate_hashes": {
+      "status": "PASSED",
+      "details": "All SHA-256 hashes unique"
+    },
+    "test_transcript_chars": {
+      "status": "PASSED",
+      "details": "Only Latin, Devanagari, Gujarati and standard punctuation"
+    },
+    "test_chars_per_second": {
+      "status": "FAILED",
+      "details": "Transcript-duration mismatch on longer recordings (CPS < 5)"
+    },
+    "test_lang_id_valid": {
+      "status": "SKIPPED",
+      "details": "langdetect optional"
+    }
+  }
+}

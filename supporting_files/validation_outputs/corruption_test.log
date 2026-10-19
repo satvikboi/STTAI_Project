@@ -1,0 +1,3 @@
+Corruption A (wrong sample rate 8kHz): FAILED as expected (PASS)
+Corruption B (clipped audio): FAILED as expected (PASS)
+Corruption C (full silence): FAILED as expected (PASS)

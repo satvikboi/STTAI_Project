@@ -1,0 +1,51 @@
+{
+  "phase": "after",
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "skipped": 1,
+    "total": 10
+  },
+  "checks": {
+    "test_sample_rate": {
+      "status": "PASSED",
+      "details": "All 249 clips at 16000 Hz"
+    },
+    "test_channels": {
+      "status": "PASSED",
+      "details": "All 249 clips mono"
+    },
+    "test_duration_bounds": {
+      "status": "PASSED",
+      "details": "All 249 clips within 1.0s - 30.0s"
+    },
+    "test_no_clipping": {
+      "status": "PASSED",
+      "details": "All amplitudes normalized peak <= 0.95"
+    },
+    "test_silence_ratio": {
+      "status": "PASSED",
+      "details": "All silence ratios < 0.50"
+    },
+    "test_snr_estimate": {
+      "status": "PASSED",
+      "details": "All clips meet SNR >= 5 dB threshold"
+    },
+    "test_no_duplicate_hashes": {
+      "status": "PASSED",
+      "details": "All 249 SHA-256 hashes unique"
+    },
+    "test_transcript_chars": {
+      "status": "PASSED",
+      "details": "Valid UTF-8 code-mixed charset"
+    },
+    "test_chars_per_second": {
+      "status": "PASSED",
+      "details": "All speech rates within 5 - 40 CPS"
+    },
+    "test_lang_id_valid": {
+      "status": "SKIPPED",
+      "details": "langdetect optional"
+    }
+  }
+}
